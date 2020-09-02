@@ -42,4 +42,4 @@ For the "user" authentication endpoints to work, the user must have access to th
 
 ---
 
-Copyright &copy; 2020 Data Mill Services, LLC
+Copyright &copy; 2020 Stitch
