@@ -16,7 +16,7 @@ jobs:
           name: 'JSON Validator'
           command: |
             source /usr/local/share/virtualenvs/tap-tester/bin/activate
-            stitch-validate-json /usr/local/share/virtualenvs/tap-autodesk-bim-360/lib/python3.5/site-packages/tap_autodesk_bim_360/schemas/*.json
+            stitch-validate-json tap_autodesk_bim_360/schemas/*.json
       - run:
           name: 'pylint'
           command: |
