@@ -12,6 +12,7 @@ jobs:
             source /usr/local/share/virtualenvs/tap-autodesk-bim-360/bin/activate
             uv pip install -U 'pip<19.2' setuptools
             uv pip install .[dev]
+            uv pip install pylint
       - run:
           name: 'JSON Validator'
           command: |
