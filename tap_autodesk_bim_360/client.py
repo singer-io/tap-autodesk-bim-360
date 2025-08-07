@@ -96,11 +96,11 @@ class BIM360Client(object):
             if auth == 'user' and \
                 (self.__user_access_token is None or \
                  self.__user_expires_at <= datetime.utcnow()):
-                    self.refresh_user_access_token()
+                self.refresh_user_access_token()
             elif auth == 'app' and \
                 (self.__app_access_token is None or \
                  self.__app_expires_at <= datetime.utcnow()):
-                    self.refresh_app_access_token()
+                self.refresh_app_access_token()
 
             if auth == 'user':
                 access_token = self.__user_access_token
@@ -138,6 +138,6 @@ class BIM360Client(object):
             LOGGER.warn(message)
             raise RateLimitException(message, retry_after)
 
-        response.raise_for_status()        
+        response.raise_for_status()
 
         return response.json()
