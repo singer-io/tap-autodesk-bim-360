@@ -37,7 +37,7 @@ class BIM360Client(object):
     def refresh_user_access_token(self):
         data = self.request(
             'POST',
-            url='https://developer.api.autodesk.com/authentication/v1/refreshtoken',
+            url='https://developer.api.autodesk.com/authentication/v2/token',
             data={
                 'client_id': self.__client_id,
                 'client_secret': self.__client_secret,
@@ -61,7 +61,7 @@ class BIM360Client(object):
     def refresh_app_access_token(self):
         data = self.request(
             'POST',
-            url='https://developer.api.autodesk.com/authentication/v1/authenticate',
+            url='https://developer.api.autodesk.com/authentication/v2/token',
             data={
                 'client_id': self.__client_id,
                 'client_secret': self.__client_secret,
